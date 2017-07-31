@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Video</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <style type="text/css">
+    .fcollection {
+        height: 400px;
+        overflow-y: scroll;
+    }
+
+    .collection-item:hover {
+        background-color: #ECF0B0;
+    }
+
+    h5 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .fwhit {
+        background-color: #ECF0F1;
+    }
+
+    .fyell {
+        background-color: #E67E22;
+    }
+
+    .fblu {
+        background-color: #34495E;
+    }
+
+    .fgre {
+        background-color: #27AE60;
+    }
+    </style>
+</head>
+
+<body class="fwhit">
+    {% block content %}
+    <div class="row">
+        <div class="col s0 m2"></div>
+        <div class="col s12 m8">
+            <div class="input-field">
+                <input id="f-search" type="text" class="validate">
+                <label for="f-search">Enter Keyword Here</label>
+            </div>
+            <a class="btn waves-effect waves-light fgre" type="button" name="action" onclick="ngsearch()">
+    Submit<i class="material-icons right">send</i></a>
+            <!-- </div> -->
+        </div>
+        <div class="col s0 m2"></div>
+    </div>
+    <div class="container col s12 m10">
+        <ul class="collection with-header">
+            <li class="collection-header">
+                <h5>Result : </h5>
+            </li>
+            <div class="fcollection" id="fcollection">
+            </div>
+        </ul>
+    </div>
+    </div>
+    {% endblock %} {% block script %}
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <script>
+    $(document).ready(function() {
+
+    });
+    </script>
+    <script>
+    function ngsearch() {
+        var fkey = $("#f-search").val();
+        $.ajax({
+                url: '/ng/search/' + encodeURIComponent(fkey),
+                type: 'GET',
+                dataType: 'json',
+                data: {},
+            })
+            .done(function(response) {
+                $.each(response.titledl, function(index, val) {
+                    if (val.length > 50) { var txt = val.substring(0, 50) + '...'; } else { var txt = val; }
+                    $("#fcollection").append("<li class='collection-item' onclick='urldirect(\"" +
+                        response.urldl[index] + "\");'><div>" +
+                        txt + "<a class='secondary-content'>" + response.urldl[index] + "</a></div></li>");
+                });
+            })
+            .fail(function() {
+                console.log("error");
+            })
+            .always(function() {
+                console.log("complete");
+            });
+        $("#fcollection").html("");
+    }
+    </script>
+    <script>
+    function urldirect(surl) {
+        // window.open('/srch/' + encodeURIComponent(surl), '_self');
+        window.open('/' , '_self');
+    }
+    </script>
+    {% endblock %}
+</body>
+
+</html>

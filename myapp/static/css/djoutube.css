@@ -1,0 +1,90 @@
+html, body {
+    background: #34495E;
+}
+
+h5 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+b {
+    color: #34495E;
+}
+
+.nav-extended {
+    height: 400px;
+}
+
+.row>.page-footer {
+    background-color: #34495E;
+}
+
+.row.input {
+    padding-top: 10px;
+}
+
+.add-height {
+    height: 300px;
+}
+
+.fcollection {
+    max-height: 170px;
+    overflow-y: scroll;
+}
+
+.fmedia {
+    height: 250px;
+}
+
+.fvid {
+    height: 100%;
+    width: 100%;
+}
+
+.collection .collection-item {
+    position: relative;
+}
+
+.collection .collection-item>div>a.btn {
+    background-color: ;
+    height: 20px;
+    line-height: 20px;
+    font-size: 0.7rem;
+    position: absolute;
+    top: 2px;
+    right: 5px;
+}
+
+.fwhit {
+    background-color: #ECF0F1;
+}
+
+.fyell {
+    background-color: #E67E22;
+}
+
+.fblu {
+    background-color: #34495E;
+}
+
+.fgre {
+    background-color: #27AE60;
+}
+
+.nav-content {
+    padding-left: 20px;
+}
+
+.fcollection {
+    height: 500px;
+    overflow-y: scroll;
+    padding-top: -10px;
+}
+
+.filwrap {
+    height: 72px;
+}
+
+.collection-item:hover {
+    background-color: #ECF0B0;
+}
