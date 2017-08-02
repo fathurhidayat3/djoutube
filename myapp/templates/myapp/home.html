@@ -8,168 +8,123 @@
 
 <body class="fblu">
     {% block content %}
-    <div class="mywrap fwhit">
-        <nav class="nav-extended">
-            <div class="nav-wrapper fblu">
-                <b><a href="#!" class="brand-logo center hide-on-med-and-down">DJoutube</a></b>
-                <a class="btn-floating btn-large halfway-fab waves-effect waves-light fgre modal-trigger" href="#modal1">
+    <nav class="nav-extended">
+        <div class="nav-wrapper fblu">
+            <b><a href="#!" class="brand-logo center hide-on-med-and-down">DJoutube</a></b>
+            <a class="btn-floating btn-large halfway-fab waves-effect waves-light fgre modal-trigger  hide-on-med-and-down" href="#modal1">
                 <i class="fa fa-info"></i></a>
-                <div class="nav-content">
-                    <ul class="tabs tabs-transparent ">
-                        <li class="tab"><a class="active" id="tab1" href="#tab-home">Home</a></li>
-                        <li class="tab"><a id="tab2" href="#tab-search">Search Here</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div id="tab-home" class="col s12">
-            <div class="row">
-                <div class="col s12 m12">
-                    <div class="wrapper">
-                        <div class="col s0 m2"></div>
-                        <div class="col s12 m8">
-                            <div class="row input">
-                                <div class="input-field">
-                                    <input id="f-url" type="text" class="validate">
-                                    <label for="f-url">Paste Youtube Link here : </label>
-                                </div>
-                                <div class="center-align">
-                                    <a class="btn waves-effect waves-light fgre" type="button" name="action" onclick="fsubmit()">
-                                    Submit
-                                    <i class="material-icons right">send</i>
-                                </a>
-                                </div>
-                            </div>
-                            <div class="divider"></div>
-                            <br>
-                            <div class="fprev row col s12">
-                                <h5 id="fvid-title">Video Uploader : Video Title</h5></div>
-                            <div class="row col s12 m6">
-                                <div class="fmedia card valign-wrapper" id="fvid-frame">
-                                    <iframe class="fvid" src="" height="250" frameborder="0" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                            <div class="row col s12 m6">
-                                <ul class="collection with-header">
-                                    <li class="collection-header">
-                                        <p>Available Formats : </p>
-                                    </li>
-                                    <div class="fcollection" id="fcollection">
-                                        <li class="collection-item">
-                                            <div>
-                                                You will see formats here
-                                                <a class="secondary-content" href=""><i class="material-icons">file_download</i></a>
-                                            </div>
-                                        </li>
-                                    </div>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col s0 m2">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="tab-search" class="col s12">
-            <div class="row">
-                <div class="col s12 m12">
-                    <div class="wrapper">
-                        <div class="col s0 m2"></div>
-                        <div class="col s12 m8">
-                            <div class="row input">
-                                <div class="input-field">
-                                    <input id="f-search" type="text" class="validate">
-                                    <label for="f-search">Enter Keyword Here</label>
-                                </div>
-                                <div class="center-align">
-                                    <a class="btn waves-effect waves-light fgre" type="button" name="action" onclick="ngsearch()">
-                                    Submit
-                                    <i class="material-icons right">send</i>
-                                </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s0 m2"></div>
-                    </div>
-                </div>
-                <div class="col s12 m12">
-                    <div class="wrapper">
-                        <div class="col s0 m2"></div>
-                        <div class="col s12 m8">
-                            <ul class="collection with-header">
-                                <li class="collection-header">
-                                    <p>Search Result : </p>
-                                </li>
-                                <div class="fcollection" id="fscollection">
-                                </div>
-                            </ul>
-                        </div>
-                        <div class="col s0 m2"></div>
-                    </div>
-                </div>
-                <div class="col s12 m12">
-                    <div class="wrapper">
-                        <div class="col s0 m2"></div>
-                        <div class="col s12 m8">
-                            <div class="filwrap card valign-wrapper">
-                                <div class="container">
-                                    <!-- <p>Relevant Author : &nbsp; Saya &nbsp; Kamu &nbsp; Dia</p> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s0 m2"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end nav -->
-        <!-- modal -->
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <h4>Instruction : </h4>
-                <ul>
-                    <li>1. Get Youtube video link address or id you want to download, for example :
-                        <br>
-                        <p><b class="tooltipped" data-position="top" data-delay="20" data-tooltip="video link">https://www.youtube.com/watch?v=YgtL4S7Hrwo</b> or <b class="tooltipped" data-position="top" data-delay="20" data-tooltip="video id">YgtL4S7Hrwo</b></p>
-                    </li>
-                    <li>2. Paste on the input box then click submit</li>
-                    <li>3. Make sure you download right video by watch preview</li>
-                    <li>4. Choose video format you want</li>
-                    <li>5. Enjoy</li>
-                    <li></li>
-                    <li><h6><i>Note:
-                    <span>You can use search feature in tab next to home to look for your downloadable video :)</span></i></h6></li>
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a class="active" id="tab1" href="#tab-home">Home</a></li>
+                    <li class="tab"><a id="tab2" href="#tab-search">Search</a></li>
                 </ul>
             </div>
         </div>
-        <div class="col s12 m12">
-            <nav class="nav fyell">
-                <div class="nav-content">
-                    Supported Sites : &emsp;<span>
-                    <i class="fa fa-youtube-square fa-2x tooltipped" data-tooltip="Youtube" data-position="top" data-delay="20"></i>
-                    </span>
-                </div>
-            </nav>
-            <footer class="page-footer fblu">
-                <div class="row">
-                    <div class="col l6 offset-l1 s12">
-                        <h5 class="white-text">DJoutube</h5>
-                        <p class="grey-text text-lighten-4">Is a web app to download youtube video with various formats.
-                            <br> This site is open source project built with Python, Django, Jquery and MaterializeCSS.
-                            <br> You can grab the source code <a id="grab-me" href="https://github.com/fzrbbx/djoutube">here</a>.
-                            <br> Happy coding...</p>
+    </nav>
+    <div id="tab-home">
+        <div class="row">
+            <div class="col s0 l1"></div>
+            <div class="col s12 l10">
+                <div class="input">
+                    <div class="input-field">
+                        <input id="f-url" type="text" class="validate">
+                        <label for="f-url">Paste Youtube Link here : </label>
                     </div>
-                    <div class="col l4 offset-l1 s12">
-                        <h5 class="white-text">External Links</h5>
-                        <ul>
-                            <li><a class="grey-text text-lighten-3" href="https://fzrbbx.github.io">Discover more :D</a></li>
-                        </ul>
+                    <div class="center-align">
+                        <a class="btn waves-effect waves-light fgre" type="button" name="action" onclick="fsubmit()">Submit<i class="material-icons right">send</i></a>
                     </div>
                 </div>
-            </footer>
+                <div class="divider"></div>
+                <h5 id="fvid-title">Video Uploader : Video Title</h5>
+                <div class="col l6 s12">
+                    <div class="fmedia card valign-wrapper" id="fvid-frame">
+                        <iframe src="" height="250" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col l6 s12">
+                    <ul class="collection with-header">
+                        <li class="collection-header">
+                            <p>Available Formats : </p>
+                        </li>
+                        <div class="fcollection" id="fcollection">
+                            <li class="collection-item">
+                                <div>
+                                    You will see formats here
+                                    <a class="secondary-content" href=""><i class="material-icons">file_download</i></a>
+                                </div>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="col s0 l1"></div>
         </div>
     </div>
+    <div id="tab-search">
+        <div class="row">
+            <div class="col s0 l1"></div>
+            <div class="col s12 l10">
+                <div class="input">
+                    <div class="input-field">
+                        <input id="f-search" type="text" class="validate">
+                        <label for="f-search">Enter Keyword Here</label>
+                    </div>
+                    <div class="center-align">
+                        <a class="btn waves-effect waves-light fgre" type="button" name="action" onclick="ngsearch()">Submit<i class="material-icons right">send</i></a>
+                    </div>
+                </div>
+                <div class="divider"></div>
+            </div>
+            <div class="col s0 l1"></div>
+        </div>
+        <div class="row">
+            <div class="col s0 l1"></div>
+            <div class="col s12 l10">
+                <ul class="collection with-header">
+                    <li class="collection-header">
+                        <p>Search Result : </p>
+                    </li>
+                    <div class="fcollection" id="fscollection">
+                    </div>
+                </ul>
+            </div>
+            <div class="col s0 l1"></div>
+        </div>
+    </div>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Instruction : </h4>
+            <ul>
+                <li>1. Get Youtube video link address or id you want to download, for example :
+                    <br>
+                    <p><b class="tooltipped" data-position="top" data-delay="20" data-tooltip="video link">https://www.youtube.com/watch?v=YgtL4S7Hrwo</b> or <b class="tooltipped" data-position="top" data-delay="20" data-tooltip="video id">YgtL4S7Hrwo</b></p>
+                </li>
+                <li>2. Paste on the input box then click submit</li>
+                <li>3. Make sure you download right video by watch preview</li>
+                <li>4. Choose video format you want</li>
+                <li>5. Enjoy</li>
+                <li></li>
+                <li>
+                    <h6><i>Note:
+                    <span>You can use search feature in tab next to home to look for your downloadable video :)</span></i></h6></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="page-footer fblu">
+            <div class="row">
+                <div class="col l4 offset-l1 s12">
+                    <h6 class="white-text">DJoutube</h6>
+                    <p class="grey-text text-lighten-4">Is a web app to download youtube video with various formats. This site is open source project built with Python, Django, Jquery and MaterializeCSS. You can grab the source code <a id="grab-me" href="https://github.com/fzrbbx/djoutube">here</a>. Happy coding...</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h6 class="white-text">External Links</h6>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://fzrbbx.github.io">Discover more :D</a></li>
+                    </ul>
+                </div>
+        </div>
+    </footer>
     {% endblock %} {% block script %}
     <script src="{% static 'js/angular.min.js' %}"></script>
     <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>

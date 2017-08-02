@@ -1,35 +1,36 @@
-html, body {
-    background: #34495E;
-}
-
 h5 {
-    margin-top: 0px;
-    margin-bottom: 0px;
+
+    padding-left: 10px;
 }
 
 b {
     color: #34495E;
 }
 
+.row {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 .nav-extended {
     height: 400px;
 }
 
-.row>.page-footer {
-    background-color: #34495E;
+.nav-content {
+    padding-left: 20px;
 }
 
-.row.input {
-    padding-top: 10px;
-}
-
-.add-height {
-    height: 300px;
+.input {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .fcollection {
     max-height: 170px;
     overflow-y: scroll;
+    height: 500px;
+    overflow-y: scroll;
+    padding-top: -10px;
 }
 
 .fmedia {
@@ -55,6 +56,14 @@ b {
     right: 5px;
 }
 
+.filwrap {
+    height: 72px;
+}
+
+.collection-item:hover {
+    background-color: #ECF0B0;
+}
+
 .fwhit {
     background-color: #ECF0F1;
 }
@@ -69,22 +78,4 @@ b {
 
 .fgre {
     background-color: #27AE60;
-}
-
-.nav-content {
-    padding-left: 20px;
-}
-
-.fcollection {
-    height: 500px;
-    overflow-y: scroll;
-    padding-top: -10px;
-}
-
-.filwrap {
-    height: 72px;
-}
-
-.collection-item:hover {
-    background-color: #ECF0B0;
 }
